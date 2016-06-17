@@ -8,7 +8,11 @@ To add functionality see /lua/src/imports.lua
 To demonstrate the usage follow these instructions.
 
 1.) git clone git://github.com/mostvotedplaya/LuaBuild.git
+
 2.) cd LuaBuild/lua/src
+
 3.) make generic
+
 4.) Run the interative interpreter by running ./lua 
+
 5.) Execute print(a())
