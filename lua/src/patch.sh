@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/env bash
 
 sed -i 's@"@\\"@g' imports.lua
 
