@@ -11,8 +11,12 @@ To demonstrate the usage follow these instructions.
 
 2.) cd LuaBuild/lua/src
 
-3.) make generic
+3.) sh patch.sh
 
-4.) Run the interative interpreter by running ./lua 
+4.) make generic
 
-5.) Execute print(a())
+5.) Run the interative interpreter by running ./lua 
+
+6.) Execute print(a())
+
+Everytime you modify imports.lua you should re run patch.sh

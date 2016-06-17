@@ -1,5 +1,13 @@
 #!/usr/bin/env
 
-IMPORTS=$(cat imports.lua)
+sed -i 's@"@\\"@g' imports.lua
 
-sed "s@/\* Imports. \*/@$IMPORTS@g" import.c
+IMPORTS=`cat imports.lua`
+IMPORTS="#include \"lua.h\"\n#include \"lauxlib.h\"\n\
+         int luaopen_import(lua_State *L)\n\
+         {\n\
+          luaL_dostring(L, \"$IMPORTS\");\n\
+          return 0;\n\
+         }\n"
+
+echo $IMPORTS > import.c
