@@ -10,4 +10,4 @@ IMPORTS="#include \"lua.h\"\n#include \"lauxlib.h\"\n\
           return 0;\n\
          }\n"
 
-echo $IMPORTS > import.c
+echo -e $IMPORTS > import.c
